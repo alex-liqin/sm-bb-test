@@ -1,3 +1,9 @@
+/*
+ * This test case showcase each 'it()' contain a typical test scenario, which contains a test and each test is independent with each other.
+ * Main.sendMailHttp() with chia-http utility for remote test is used.
+ */
+
+
 var fetch = require("node-fetch");
 var Mail = require("../utility/mail.js");
 var globals = require("../utility/globals.js");
@@ -22,8 +28,6 @@ describe(__filename.split(__dirname+"/").pop(), function() {
 
     expect(response).to.be.json
     expect(response).to.have.status(status)
-    console.log(response)
-    expect(response.header).to.include({"application/json"})
 
     assert.equal(response.status, status);
   });
